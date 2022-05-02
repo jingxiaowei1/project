@@ -1,0 +1,10 @@
+git 修改提交记录
+
+git rebase -i head~n                    // 前多少次的合并提交记录  i=interactive
+  unix    i 进入编辑模式
+   unix  esc 推出编辑模式
+  unix :wq 保存文件
+  
+git commit --amend
+git rebase --continue                // 下一个
+git rebase --abort            // 终止
