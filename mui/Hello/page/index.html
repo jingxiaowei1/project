@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>pdf to img</title>
+		<meta name="viewport" content="widh-device-width,initial-scale=1"/>
+	</head>
+	<body>
+		<canvas id="canvas" width="5" height="5"></canvas>
+		<img src="temp.png" id="myImage">
+		<img src="temp.png" id="Image">
+		<script type="text/jscript">
+			var canvas = document.getElementById("canvas");
+			ctx = canvas.getContext('2d');
+			ctx.fillStyle='yellow';
+			ctx.fillRect(0,0,300,400);
+			var myImage = document.getElementById("myImage");
+			var dataURL = canvas.toDataURL('image/png');
+			console.log(dataURL);
+			myImage.src=dataURL;
+			
+		</script>
+	</body>
+</html>
